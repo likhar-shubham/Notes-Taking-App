@@ -37,6 +37,7 @@ function displayNotes() {
             let noteData = document.createElement('div');
             noteData.className = 'note-list';
             noteData.id = 'note-list-' + (index + 1);
+            // Dynamic id generation for div element & delete button
             InputNote = (newNoteHeading1 + (index + 1) + newNoteHeading2 + elem + delBtn1 + (index + 1) + delBtn2);
             noteData.innerHTML = InputNote;
             noteCardNode.appendChild(noteData);
@@ -74,14 +75,11 @@ function searchNotes(event) {
     let noteCardArray = Array.from(noteCardNode.children);
     noteCardArray.forEach((obj, index) => {
         let noteContent = obj.getElementsByTagName('p')[0].innerText.toLowerCase();
-        console.log("noteContent", noteContent);
         if (noteContent.includes(inputSearchValue.value.toLowerCase())) {
             noteCardArray[index].style.display = 'block';
-            console.log("value present");
         }
         else
             noteCardArray[index].style.display = 'none';
-        console.log("value not present");
     })
 }
 
