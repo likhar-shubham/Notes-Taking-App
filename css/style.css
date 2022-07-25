@@ -42,7 +42,7 @@ header {
     width: 200px;
 }
 
-#btn {
+#search-btn,#reset-btn {
     height: 30px;
     width: 100px;
     background-color: rgb(10, 2, 39);
@@ -95,5 +95,4 @@ header {
 
 .del-btn{
     margin-top: 150px;
-    position:   fixed;;
 }

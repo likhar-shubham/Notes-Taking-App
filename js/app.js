@@ -1,6 +1,8 @@
 let noteBoxNode = document.getElementById('note-box');
 let noteCardNode = document.getElementById('notes-card');
 let localStorageNoteList = JSON.parse(localStorage.getItem('notes'));
+let resetBtn = document.getElementById("reset-btn");
+let inputSearchValue = document.getElementById('search-notes');
 let delBtnNode = [];
 let delBtnIds = [];
 let InputNote = ``;
@@ -61,5 +63,34 @@ function onClickDel(event) {
     let noteToBeRemoveFromLocalStorage = currElement.parentElement.getElementsByTagName('p')[0].innerHTML;
     localStorageNoteList.splice(localStorageNoteList.indexOf(noteToBeRemoveFromLocalStorage), 1);
     localStorage.setItem('notes', JSON.stringify(localStorageNoteList));
+    event.preventDefault();
+}
+
+let searchBtn = document.getElementById('search-btn');
+searchBtn.addEventListener('click', searchNotes);
+
+// Function to search the notes
+function searchNotes(event) {
+    let noteCardArray = Array.from(noteCardNode.children);
+    noteCardArray.forEach((obj, index) => {
+        let noteContent = obj.getElementsByTagName('p')[0].innerText.toLowerCase();
+        console.log("noteContent", noteContent);
+        if (noteContent.includes(inputSearchValue.value.toLowerCase())) {
+            noteCardArray[index].style.display = 'block';
+            console.log("value present");
+        }
+        else
+            noteCardArray[index].style.display = 'none';
+        console.log("value not present");
+    })
+}
+
+// Resetting the data according to localStorage
+resetBtn.addEventListener('click', resetToDefaultView);
+
+function resetToDefaultView(event) {
+    displayNotes();
+    delBtnDetector();
+    inputSearchValue.value = "";
     event.preventDefault();
 }
