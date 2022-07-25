@@ -1,0 +1,99 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    background-color: rgb(10, 2, 39);
+    color: white;
+    height: 50px;
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+.left-item {
+    margin: 10px 10px 1px 10px;
+}
+
+#logo {
+    padding: 2px;
+    font-size: 20px;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+}
+
+.right-item {
+    margin: 10px 10px 0px 0px;
+}
+
+#search-notes {
+    height: 30px;
+    width: 200px;
+}
+
+#btn {
+    height: 30px;
+    width: 100px;
+    background-color: rgb(10, 2, 39);
+    color: rgb(126 207 131);
+    border: 1px solid rgb(126 207 131);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 35px 0px 0px 250px;
+    color: rgb(10, 2, 39);
+}
+
+.add-note {
+    margin: 25px 0px 15px 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+#note-box {
+    height: 90px;
+    width: 650px;
+    margin: 10px 0px 10px 0px;
+    border: 2px solid rgb(10, 2, 39);
+}
+
+.note-btn {
+    height: 35px;
+    width: 100px;
+    background-color: #0a5edbcc;
+    border: 2px solid rgb(10, 2, 39);
+    ;
+    color: white;
+}
+
+.note-list {
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    height: 230px;
+    border: 2px solid rgb(10, 2, 39);
+}
+
+.notes-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.del-btn{
+    margin-top: 150px;
+    position:   fixed;;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Taking App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="left">
+            <div class="left-item" id="logo">Magic Notes</div>
+            <div class="left-item">Home</div>
+        </div>
+        <div class="right">
+            <input type="text" class="right-item" name="SearchNotes" id="search-notes"
+                placeholder="Search your Notes here">
+            <input type="button" class="right-item" value="Search" id="btn">
+        </div>
+    </header>
+    <div class="container">
+        <!-- <div> -->
+        <h1 id="head-h1">Welcome to Magic Notes</h1>
+        <div class="add-note">
+            <h3>Add a Note</h3>
+            <textarea name="note-box" id="note-box" cols="30" rows="10"></textarea>
+            <button class="note-btn" id="add-btn">Add Note</button>
+        </div>
+        <h1 id="head-h1">Your Notes</h1>
+        <div class="notes-card" id="notes-card">
+            <!-- <div class="note-list">
+                <h3>Note 1</h3>
+                <p>adding random text here to check if we are able to correctly locate the elements or not</p>
+                <button class="note-btn del-btn" id="del-btn">Delete Note</button>
+            </div> -->
+        </div>
+    </div>
+</body>
+<script src="js/app.js"></script>
+</html>
